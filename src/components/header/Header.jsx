@@ -37,7 +37,7 @@ function Header() {
     Projects:{
       path:'/projects'
     },
-    About:{
+    About:{ 
       path:'/about'
     },
     Contact:{
@@ -47,7 +47,7 @@ function Header() {
 
   return (
     <>
-    <header className={`items-center  text-white ${
+    <header className={`items-center  text-white z-50 bg-transparent ${
         isScrolled ? "backdrop-blur-lg" : "" // Apply blur when scrolled
       }`}>
         <div className="navigation flex items-center justify-between lg:">
@@ -104,7 +104,7 @@ function Header() {
         <div
           className={` ${
             isOpen ? "hidden" : ""
-          } nav_drawer absolute bg-white h-[100vh] text-black w-[200px] shadow top-0 right-0 transition-all ease-in-out duration-500 lg:hidden`}
+          } nav_drawer absolute bg-white h-[100vh] z-1000 text-black w-[200px] shadow top-0 right-0 transition-all ease-in-out duration-500 lg:hidden`}
         >
           <IoClose
             className="absolute top-1 right-0 m-6"

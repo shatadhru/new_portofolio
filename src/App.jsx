@@ -1,9 +1,18 @@
+import Header from "./components/header/Header";
 import Main_body from "./components/main_body/Main_body"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
     <div>
-   <Main_body />
+
+<Router>
+  <Header />
+  <Routes>
+    <Route path="/" element={<Main_body />} />
+  </Routes>
+</Router>
     </div>
   )
 }
