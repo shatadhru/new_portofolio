@@ -14,6 +14,7 @@ import Packages from "../Packages/Packages";
 import { FaCartShopping } from "react-icons/fa6";
 import { GrBlog } from "react-icons/gr";
 import { FaPersonChalkboard } from "react-icons/fa6";
+import Premium_Buttons from "../Buttons/Premium_Buttons";
 
 
 
@@ -154,7 +155,7 @@ const blog_ok_services = [
         />
       </section>
 
-      <div className="css_frameworks_and_best_cms_for_you_box lg:grid lg:grid-cols-2">
+      <div className="css_frameworks_and_best_cms_for_you_box lg:grid lg:grid-cols-2 ">
         <section className="hidden bg-[#000000] h-[80vh] lg:flex lg:h-[80vh] lg:flex lg:flex-col lg:items-center">
           <Headings title_pink="Css" title_white="Frameworks" />
           <Card
@@ -215,7 +216,7 @@ const blog_ok_services = [
         </button>
       </section>
 
-      <div className="packages bg-black h-auto flex flex-col items-center text-white ">
+      <div className="packages bg-black h-auto pb-20 flex flex-col items-center text-white ">
         <Headings title_pink="Special" title_white="Packages" />
         <div className="packages_box lg:grid lg:grid-cols-3">
           <Packages
@@ -237,6 +238,67 @@ const blog_ok_services = [
             Icon={FaPersonChalkboard}
           />
         </div>
+      </div>
+
+      <div className="contact_with_us bg-[#000000] h-[100vh] text-white flex flex-col items-center ">
+        <Headings title_pink="Contact" title_white="With Us" />
+
+        <form
+          className="flex flex-col mx-10  p-10  "
+          action=""
+        >
+          <label
+            htmlFor="name"
+            className="absolute bg-black -my-2 px-2 text-[15px] ml-[20px]"
+          >
+            Name :
+          </label>
+          <input
+            type="text"
+            className="name w-[400px] lg:w-[600px] mb-6 p-4 rounded-2xl border-pink-400 border-dassed border-2"
+            id="name"
+            placeholder="Enter Your name"
+          />
+          <label
+            htmlFor="name"
+            className="absolute bg-black my-18 absolute bg-black -my-2 px-2 text-[15px] ml-[20px]"
+          >
+            Email :
+          </label>
+          <input
+            type="text"
+            className="email mb-6 p-4 rounded-2xl border-pink-400 border-dassed border-2"
+            id="email"
+            placeholder="Enter Your Email"
+          />
+          <label
+            htmlFor="name"
+            className="absolute bg-black my-40 px-2 text-[15px] ml-[20px]"
+          >
+            Phone :
+          </label>
+          <input
+            type="text"
+            className="name mb-6 p-4 rounded-2xl border-pink-400 border-dassed border-2"
+            id="name"
+            placeholder="Enter Your Phone Number"
+          />
+          <label
+            htmlFor="messages"
+            className="absolute bg-black my-60 rounded-2xl px-2 text-[15px] ml-[20px]"
+          >
+            Messages :
+          </label>
+          <input
+            type="text"
+            className=" p-4 rounded-2xl  border-pink-400 border-dassed border-2"
+            name="messages"
+            id="messages"
+            maxLength="1000"
+          />
+
+<Premium_Buttons className="premium_buttons" name="Submit Now "/>
+        </form>
       </div>
     </div>
   );
