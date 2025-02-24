@@ -15,6 +15,8 @@ import { FaCartShopping } from "react-icons/fa6";
 import { GrBlog } from "react-icons/gr";
 import { FaPersonChalkboard } from "react-icons/fa6";
 import Premium_Buttons from "../Buttons/Premium_Buttons";
+import Qrcode from "../Qrcode/Qrcode";
+
 
 
 
@@ -240,13 +242,10 @@ const blog_ok_services = [
         </div>
       </div>
 
-      <div className="contact_with_us bg-[#000000] h-[100vh] text-white flex flex-col items-center ">
+      <div className="contact_with_us bg-[#000000] w-[100%] h-[100vh] text-white flex flex-col items-center ">
         <Headings title_pink="Contact" title_white="With Us" />
 
-        <form
-          className="flex flex-col mx-10  p-10  "
-          action=""
-        >
+        <form className="flex flex-col mx-10  p-10  " action="">
           <label
             htmlFor="name"
             className="absolute bg-black -my-2 px-2 text-[15px] ml-[20px]"
@@ -297,8 +296,11 @@ const blog_ok_services = [
             maxLength="1000"
           />
 
-<Premium_Buttons className="premium_buttons" name="Submit Now "/>
+          <Premium_Buttons className="premium_buttons" name="Submit Now " />
         </form>
+      </div>
+      <div className="footer bg-[#FB64B6] h-[60px] flex items-center justify-center">
+        <p className="text-white"> ©️ 2025 Shatadhru Acharjee. All rights reserved.</p>
       </div>
     </div>
   );

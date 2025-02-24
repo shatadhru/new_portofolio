@@ -47,9 +47,11 @@ function Header() {
 
   return (
     <>
-    <header className={`items-center  text-white z-50 bg-transparent ${
-        isScrolled ? "backdrop-blur-lg" : "" // Apply blur when scrolled
-      }`}>
+      <header
+        className={`items-center  text-white z-50 bg-transparent  w-[100%] ${
+          isScrolled ? "backdrop-blur-lg" : "" // Apply blur when scrolled
+        }`}
+      >
         <div className="navigation flex items-center justify-between lg:">
           {/* Logo Part */}
 
@@ -130,7 +132,7 @@ function Header() {
 
             <div className="login_signup_box flex flex-col items-center justify-center mt-20 gap-2 ">
               <div className="sign_in_group ml-4 flex flex-col justify-center items-center gap-2">
-                <FaRegUser size={16} className=""/>
+                <FaRegUser size={16} className="" />
                 <a href="/login" className="hover:text-pink-500">
                   Sign in
                 </a>
