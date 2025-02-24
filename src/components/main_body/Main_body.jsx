@@ -14,8 +14,7 @@ import Packages from "../Packages/Packages";
 import { FaCartShopping } from "react-icons/fa6";
 import { GrBlog } from "react-icons/gr";
 import { FaPersonChalkboard } from "react-icons/fa6";
-import Premium_Buttons from "../Buttons/Premium_Buttons";
-import Qrcode from "../Qrcode/Qrcode";
+import { useState } from "react";
 
 
 
@@ -68,18 +67,24 @@ const blog_ok_services = [
   ];
 
 
+const [carecterNumber , SetCarecterNumber] = useState(0);
+
+const OncarecterChangeOfTextArea = (e) =>{
+  const carecterNumber = e.target.value.length; 
+  SetCarecterNumber(carecterNumber);
+}
 
   return (
     <div>
-      <section className="main_body">
+      <section className="main_body w-[100%]">
         <div className="contents flex flex-col items-center justify-center ">
-          <div className="rounded border-2 border-solid pt-1 pb-1 pl-4 pr-4 rounded-4xl text-[12px] border-amber-50 mt-45">
-            <h6 className="text-white">
+          <div className="rounded border-2 border-solid pt-1 pb-1 pl-4 pr-4 rounded-4xl text-[12px] border-amber-50 mt-30 lg:mt-45">
+            <h6 className="text-white ">
               Finding Proffesional Web Developer???{" "}
             </h6>
           </div>
 
-          <h1 className="text-[56px] text-white font-[Lexend] mt-[12px] text-center">
+          <h1 className=" text-[46px] lg:text-[56px] text-white font-[Lexend] mt-[12px] text-center">
             Your Passionate Web Developer
           </h1>
           <div className="max-w-[600px]">
@@ -241,67 +246,132 @@ const blog_ok_services = [
           />
         </div>
       </div>
+      <section className="contact-section bg-gradient-to-b from-gray-900 to-black min-h-screen text-gray-100 flex flex-col items-center py-20 px-6">
+        <Headings title_pink="Contact" title_white="Us"/>
 
-      <div className="contact_with_us bg-[#000000] w-[100%] h-[100vh] text-white flex flex-col items-center ">
-        <Headings title_pink="Contact" title_white="With Us" />
+        <form className="w-full max-w-2xl space-y-8 mt-10">
+          {/* Name Field */}
+          <div className="relative group">
+            <input
+              type="text"
+              id="name"
+              className="w-full px-6 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-100 placeholder-transparent 
+                 focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 peer transition-all duration-300
+                 backdrop-blur-sm hover:border-gray-600"
+              placeholder="John Doe"
+              required
+            />
+            <label
+              htmlFor="name"
+              className="absolute left-6 top-10 text-gray-400 text-sm transition-all duration-200 
+                   peer-placeholder-shown:text-base peer-placeholder-shown:top-4
+                   peer-focus:top-3 peer-focus:-mt-6 peer-focus:px-2 peer-focus:bg-[#0E1525] peer-focus:text-sm peer-focus:text-pink-400"
+            >
+              Full Name
+            </label>
+          </div>
 
-        <form className="flex flex-col mx-10  p-10  " action="">
-          <label
-            htmlFor="name"
-            className="absolute bg-black -my-2 px-2 text-[15px] ml-[20px]"
-          >
-            Name :
-          </label>
-          <input
-            type="text"
-            className="name w-[400px] lg:w-[600px] mb-6 p-4 rounded-2xl border-pink-400 border-dassed border-2"
-            id="name"
-            placeholder="Enter Your name"
-          />
-          <label
-            htmlFor="name"
-            className="absolute bg-black my-18 absolute bg-black -my-2 px-2 text-[15px] ml-[20px]"
-          >
-            Email :
-          </label>
-          <input
-            type="text"
-            className="email mb-6 p-4 rounded-2xl border-pink-400 border-dassed border-2"
-            id="email"
-            placeholder="Enter Your Email"
-          />
-          <label
-            htmlFor="name"
-            className="absolute bg-black my-40 px-2 text-[15px] ml-[20px]"
-          >
-            Phone :
-          </label>
-          <input
-            type="text"
-            className="name mb-6 p-4 rounded-2xl border-pink-400 border-dassed border-2"
-            id="name"
-            placeholder="Enter Your Phone Number"
-          />
-          <label
-            htmlFor="messages"
-            className="absolute bg-black my-60 rounded-2xl px-2 text-[15px] ml-[20px]"
-          >
-            Messages :
-          </label>
-          <input
-            type="text"
-            className=" p-4 rounded-2xl  border-pink-400 border-dassed border-2"
-            name="messages"
-            id="messages"
-            maxLength="1000"
-          />
+          {/* Contact Group */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Email Field */}
+            <div className="relative group">
+              <input
+                type="email"
+                id="email"
+                className="w-full px-6 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-100 placeholder-transparent 
+                   focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 peer transition-all duration-300
+                   backdrop-blur-sm peer-focus:-mt-6 peer-focus:px-2 peer-focus:bg-[#0E1525] hover:border-gray-600"
+                placeholder="john@company.com"
+                required
+              />
+              <label
+                htmlFor="email"
+                className="absolute left-6 top-3 text-gray-400 text-sm transition-all duration-200 
+                     peer-placeholder-shown:text-base peer-placeholder-shown:top-4
+                     peer-focus:top-3 peer-focus:-mt-6 peer-focus:px-2 peer-focus:bg-[#0E1525] peer-focus:text-sm peer-focus:text-pink-400"
+              >
+                Email Address
+              </label>
+            </div>
 
-          <Premium_Buttons className="premium_buttons" name="Submit Now " />
+            {/* Phone Field */}
+            <div className="relative group">
+              <input
+                type="tel"
+                id="phone"
+                className="w-full px-6 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-100 placeholder-transparent 
+                   focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 peer transition-all duration-300
+                   backdrop-blur-sm peer-focus:-mt-6 peer-focus:px-2 peer-focus:bg-[#0E1525] peer-focus:-mt-6 peer-focus:px-2 peer-focus:bg-[#0E1525] hover:border-gray-600"
+                placeholder="+1 (555) 000-0000"
+              />
+              <label
+                htmlFor="phone"
+                className="absolute left-6 top-3 text-gray-400 text-sm transition-all duration-200 
+                     peer-placeholder-shown:text-base peer-placeholder-shown:top-4
+                     peer-focus:top-3 peer-focus:-mt-6 peer-focus:px-2 peer-focus:bg-[#0E1525] peer-focus:-mt-6 peer-focus:px-2 peer-focus:bg-[#0E1525] peer-focus:text-sm peer-focus:text-pink-400"
+              >
+                Phone Number
+              </label>
+            </div>
+          </div>
+
+          {/* Message Field */}
+          <div className="relative group">
+            <textarea
+              id="message"
+              rows="6"
+              className="w-full px-6 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-100 placeholder-transparent 
+                 focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 peer resize-y transition-all duration-300
+                 backdrop-blur-sm peer-focus:-mt-6 peer-focus:px-2 peer-focus:bg-[#0E1525] hover:border-gray-600"
+              placeholder="Enter your message..."
+              maxLength="1000"
+              onChange={OncarecterChangeOfTextArea}
+              required
+            ></textarea> 
+            <label
+              htmlFor="message"
+              className="absolute left-6 top-3 text-gray-400 text-sm transition-all duration-200 
+                   peer-placeholder-shown:text-base peer-placeholder-shown:top-4
+                   peer-focus:top-3 peer-focus:-mt-6 peer-focus:px-2 peer-focus:bg-[#0E1525] peer-focus:text-sm peer-focus:text-pink-400"
+            >
+              Project Details
+            </label>
+            <span className="absolute right-4 bottom-3 text-sm text-gray-500">
+              <span className="text-pink-400">{carecterNumber}</span>/1000
+            </span>
+          </div>
+
+          {/* Submit Button */}
+          <div className="flex justify-end">
+            <button
+              type="submit"
+              className="px-8 mr-30 lg:mr-60 py-3.5 text-lg bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg 
+                 hover:scale-[1.02] transition-transform duration-300 shadow-lg hover:shadow-pink-500/20"
+            >
+              Send Message
+            </button>
+          </div>
         </form>
-      </div>
-      <div className="footer bg-[#FB64B6] h-[60px] flex items-center justify-center">
-        <p className="text-white"> ©️ 2025 Shatadhru Acharjee. All rights reserved.</p>
-      </div>
+
+        <footer className="mt-20 w-full max-w-7xl border-t border-gray-800 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-gray-400">
+            <p className="text-sm mb-4 md:mb-0">
+              © 2025 Shatadhru Innovations. All rights reserved.
+            </p>
+            <div className="flex space-x-6">
+              <a href="#" className="hover:text-pink-400 transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-pink-400 transition-colors">
+                Terms of Service
+              </a>
+              <a href="#" className="hover:text-pink-400 transition-colors">
+                Contact Support
+              </a>
+            </div>
+          </div>
+        </footer>
+      </section>
     </div>
   );
 }

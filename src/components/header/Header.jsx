@@ -106,7 +106,7 @@ function Header() {
         <div
           className={` ${
             isOpen ? "hidden" : ""
-          } nav_drawer absolute bg-white h-[100vh] z-1000 text-black w-[200px] shadow top-0 right-0 transition-all ease-in-out duration-500 lg:hidden`}
+          } nav_drawer absolute bg-white h-[100vh]  z-1000 text-black w-[200px] shadow top-0 right-0 transition-all ease-in-out duration-500 lg:hidden h-[100%] `}
         >
           <IoClose
             className="absolute top-1 right-0 m-6"
