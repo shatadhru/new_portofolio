@@ -78,13 +78,13 @@ const OncarecterChangeOfTextArea = (e) =>{
     <div>
       <section className="main_body w-[100%]">
         <div className="contents flex flex-col items-center justify-center ">
-          <div className="rounded border-2 border-solid pt-1 pb-1 pl-4 pr-4 rounded-4xl text-[12px] border-amber-50 mt-30 lg:mt-45">
+          <div className="rounded border-2 border-solid pt-1 pb-1 pl-4 pr-4 rounded-4xl text-[12px] border-amber-50 mt-40 lg:mt-45">
             <h6 className="text-white ">
               Finding Proffesional Web Developer???{" "}
             </h6>
           </div>
 
-          <h1 className=" text-[46px] lg:text-[56px] text-white font-[Lexend] mt-[12px] text-center">
+          <h1 className=" text-[40px] lg:text-[56px] text-white font-[Lexend] mt-[12px] text-center">
             Your Passionate Web Developer
           </h1>
           <div className="max-w-[600px]">
@@ -100,7 +100,7 @@ const OncarecterChangeOfTextArea = (e) =>{
         </div>
       </section>
 
-      <section className="bg-black h-[260vh] pt-[20px] pb-[60px] lg:h-[80vh]">
+      <section className="bg-black flex flex-col items-center h-[260vh] pt-[20px] pb-[60px] lg:h-[80vh]">
         <Headings title_pink="Our" title_white="Services" />
 
         <div className="grid grid-cols-1 grid-rows-6 lg:grid md:grid-cols-2 md:grid md:grid-rows-2 lg:grid-cols-4 lg:flex lg:pr-10 lg:items-center lg:justify-center">
@@ -139,7 +139,7 @@ const OncarecterChangeOfTextArea = (e) =>{
         </div>
       </section>
 
-      <section className="bg-[#000000] h-[80vh] lg:hidden lg:h-[80vh] lg:flex lg:flex-col lg:items-center">
+      <section className="bg-[#000000]  flex flex-col items-center  h-[80vh] lg:hidden lg:h-[80vh] lg:flex lg:flex-col lg:items-center">
         <Headings title_pink="Css" title_white="Frameworks" />
         <Card
           Icon={RiTailwindCssFill}
@@ -150,7 +150,7 @@ const OncarecterChangeOfTextArea = (e) =>{
           color2="#B3027AFF"
         />
       </section>
-      <section className="bg-[#000000] lg:hidden h-[80vh] lg:h-[80vh] lg:flex lg:flex-col lg:items-center">
+      <section className="bg-[#000000] flex flex-col items-center  lg:hidden h-[80vh] lg:h-[80vh] lg:flex lg:flex-col lg:items-center">
         <Headings title_pink="Perfect CMS" title_white="For You" />
         <Card
           Icon={FaWordpress}
@@ -162,8 +162,8 @@ const OncarecterChangeOfTextArea = (e) =>{
         />
       </section>
 
-      <div className="css_frameworks_and_best_cms_for_you_box lg:grid lg:grid-cols-2 ">
-        <section className="hidden bg-[#000000] h-[80vh] lg:flex lg:h-[80vh] lg:flex lg:flex-col lg:items-center">
+      <div className="css_frameworks_and_best_cms_for_you_box  lg:grid lg:grid-cols-2 ">
+        <section className="hidden bg-[#000000] flex flex-col items-center  h-[80vh] lg:flex lg:h-[80vh] lg:flex lg:flex-col lg:items-center">
           <Headings title_pink="Css" title_white="Frameworks" />
           <Card
             Icon={RiTailwindCssFill}
@@ -247,7 +247,7 @@ const OncarecterChangeOfTextArea = (e) =>{
         </div>
       </div>
       <section className="contact-section bg-gradient-to-b from-gray-900 to-black min-h-screen text-gray-100 flex flex-col items-center py-20 px-6">
-        <Headings title_pink="Contact" title_white="Us"/>
+        <Headings title_pink="Contact" title_white="Us" />
 
         <form className="w-full max-w-2xl space-y-8 mt-10">
           {/* Name Field */}
@@ -327,7 +327,7 @@ const OncarecterChangeOfTextArea = (e) =>{
               maxLength="1000"
               onChange={OncarecterChangeOfTextArea}
               required
-            ></textarea> 
+            ></textarea>
             <label
               htmlFor="message"
               className="absolute left-6 top-3 text-gray-400 text-sm transition-all duration-200 
@@ -342,10 +342,10 @@ const OncarecterChangeOfTextArea = (e) =>{
           </div>
 
           {/* Submit Button */}
-          <div className="flex justify-end">
+          <div className="flex justify-center">
             <button
               type="submit"
-              className="px-8 mr-30 lg:mr-60 py-3.5 text-lg bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg 
+              className="px-8  lg:mr-60 py-3.5 text-lg bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg 
                  hover:scale-[1.02] transition-transform duration-300 shadow-lg hover:shadow-pink-500/20"
             >
               Send Message
@@ -355,17 +355,26 @@ const OncarecterChangeOfTextArea = (e) =>{
 
         <footer className="mt-20 w-full max-w-7xl border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400">
-            <p className="text-sm mb-4 md:mb-0">
+            <p className="text-sm mb-4 md:mb-0 text-[12px]">
               © 2025 Shatadhru Innovations. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="hover:text-pink-400 transition-colors">
+              <a
+                href="#"
+                className="hover:text-pink-400 text-[12px] transition-colors"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-pink-400 transition-colors">
+              <a
+                href="#"
+                className="hover:text-pink-400 text-[12px] transition-colors"
+              >
                 Terms of Service
               </a>
-              <a href="#" className="hover:text-pink-400 transition-colors">
+              <a
+                href="#"
+                className="hover:text-pink-400  text-[12px] transition-colors"
+              >
                 Contact Support
               </a>
             </div>
