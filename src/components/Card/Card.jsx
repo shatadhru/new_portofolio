@@ -3,7 +3,7 @@ function Card({ name, color, size, description, color2, Icon }) {
   return (
     <div>
       <div
-        className="bg-black w-10/12 h-[300px] mt-10 ml-10 rounded-[20px] hover:shadow-amber-50 hover:shadow-2xs cursor-pointer"
+        className="bg-black w-10/12 h-[300px] mt-10  rounded-[20px] hover:shadow-amber-50 hover:shadow-2xs cursor-pointer"
         style={{ boxShadow: "0 -0px 20px rgba(59, 130, 246, 1)" }}
       >
         <div className="flex flex-col text-white items-center justify-center mt-2">
