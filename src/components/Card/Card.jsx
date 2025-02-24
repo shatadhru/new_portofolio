@@ -3,14 +3,17 @@ function Card({ name, color, size, description, color2, Icon }) {
   return (
     <div>
       <div
-        className="bg-black w-10/12 h-[300px] mt-10  rounded-[20px] hover:shadow-amber-50 hover:shadow-2xs cursor-pointer"
-        style={{ boxShadow: "0 -0px 20px rgba(59, 130, 246, 1)" }}
+        className="bg-black w-10/12 h-[300px] mt-10 mb-6 ml-10 mr-10 rounded-[20px] hover:shadow-pink-500 hover:shadow-2xs cursor-pointer"
+        style={{ boxShadow: "0px  2px 10px 0px #FB64B6" }}
+
       >
-        <div className="flex flex-col text-white items-center justify-center mt-2">
+        <div className="flex flex-col text-white  items-center justify-center mt-2">
           {/* Render the icon dynamically */}
           <Icon size={size} className="ml-10 mr-10 mt-6" />
           <h1 className="mt-2 text-3xl">{name}</h1>
-          <p className="text-center  text-[12px] mt-2 pl-2 pr-2 max-w-[400px]">{description}</p>
+          <p className="text-center  text-[12px] mt-2 pl-2 pr-2 max-w-[400px]">
+            {description}
+          </p>
 
           {/* Button with dynamic gradient color */}
           <button

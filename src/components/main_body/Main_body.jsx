@@ -139,7 +139,7 @@ const OncarecterChangeOfTextArea = (e) =>{
         </div>
       </section>
 
-      <section className="bg-[#000000]  flex flex-col items-center  h-[80vh] lg:hidden lg:h-[80vh] lg:flex lg:flex-col lg:items-center">
+      <section className="bg-[#000000]  flex flex-col justify-center items-center  h-[80vh] lg:hidden lg:h-[80vh] lg:flex lg:flex-col lg:items-center">
         <Headings title_pink="Css" title_white="Frameworks" />
         <Card
           Icon={RiTailwindCssFill}
@@ -353,16 +353,13 @@ const OncarecterChangeOfTextArea = (e) =>{
           </div>
         </form>
 
-        <footer className="mt-20 w-full max-w-7xl border-t border-gray-800 pt-8">
+        <footer className="mt-20 w-full max-w-7xl border-t text-[20%] border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400">
             <p className="text-sm mb-4 md:mb-0 text-[12px]">
               © 2025 Shatadhru Innovations. All rights reserved.
             </p>
-            <div className="flex space-x-6">
-              <a
-                href="#"
-                className="hover:text-pink-400 text-[12px] transition-colors"
-              >
+            <div className="flex space-x-6 items-center justify-center">
+              <a href="#" className="hover:text-pink-400  transition-colors">
                 Privacy Policy
               </a>
               <a
