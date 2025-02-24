@@ -353,7 +353,7 @@ const OncarecterChangeOfTextArea = (e) =>{
           </div>
         </form>
 
-        <footer className="mt-20 w-full max-w-7xl border-t text-[20%] border-gray-800 pt-8">
+        <footer className="mt-20 w-full max-w-7xl border-t text-[20%]box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400">
             <p className="text-sm mb-4 md:mb-0 text-[12px]">
               © 2025 Shatadhru Innovations. All rights reserved.

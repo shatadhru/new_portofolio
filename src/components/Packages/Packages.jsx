@@ -8,7 +8,7 @@ function Packages({ ok_service = [], Not_ok_service = [], name, Description, Ico
     <div>
       <section className="bg-black  flex flex-col items-center mt-10 text-white">
         <div
-          className="bg-black flex flex-col items-center w-[80vh]  h-[680px] mt-10 rounded-[20px] hover:shadow-amber-50 hover:shadow-2xs cursor-pointer"
+          className="bg-black flex flex-col items-center   h-[680px] mt-10 rounded-[20px] hover:shadow-amber-50 hover:shadow-2xs cursor-pointer"
           style={{ boxShadow: "0px  2px 10px 0px #FB64B6" }}
         >
           <Icon size={60} className="mt-12" />
