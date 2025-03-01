@@ -162,7 +162,7 @@ function Header() {
           } justify-center mb-20`}
         >
           <IoClose
-            className=" hidden lg:block` lg:absolute lg:top-6 lg:right-40 lg:cursor-pointer"
+            className=" hidden lg:block lg:absolute lg:top-6 lg:right-40 lg:cursor-pointer"
             color="black"
             size={20}
             onClick={() => set_Sign_up_and_register_menu(true)}
