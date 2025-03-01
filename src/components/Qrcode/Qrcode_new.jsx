@@ -1,6 +1,9 @@
 import QRCode from "react-qr-code";
 
-function Qrcode() {
+
+function Qrcode_new({ username, email }) {
+  const qrValue = `${username}${email}shatadhru_successfull_loged_in_user`;
+
   return (
     <div>
       <div
@@ -14,12 +17,12 @@ function Qrcode() {
         <QRCode
           size={256}
           style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-          value={"Hello"}
-          viewBox={`0 0 256 256`}
+          value={qrValue}
+          viewBox="0 0 256 256"
         />
       </div>
     </div>
   );
 }
 
-export default Qrcode;
+export default Qrcode_new;

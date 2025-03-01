@@ -6,11 +6,16 @@ import "./header.css"
 
 import { useEffect, useState } from "react";
 
+import Qrcode_new from "../Qrcode/Qrcode_new"
+import Sign_in from "../User_Info_Forms_nad_Qr_Codes/Sign_in";
+import Sign_up from "../User_Info_Forms_nad_Qr_Codes/Sign_up";
 
 function Header() {
 
   const [isOpen, setisopen] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
+  
+  const [Sign_up_and_register_menu , set_Sign_up_and_register_menu] = useState(true);
 
    useEffect(() => {
      const handleScroll = () => {
@@ -48,7 +53,7 @@ function Header() {
   return (
     <>
       <header
-        className={`items-center  text-white z-50 bg-transparent  w-[100%] ${
+        className={`items-center  text-white z-50 bg-transparent h-[90px]   w-[100%] ${
           isScrolled ? "backdrop-blur-lg" : "" // Apply blur when scrolled
         }`}
       >
@@ -91,8 +96,14 @@ function Header() {
             <div className="login_signup_box lg:flex lg:items-center lg:gap-2 mr-10 ">
               <div className="sign_in_group lg:flex lg:gap-2 ">
                 <FaRegUser size={20} />
-                <a href="/login" className="hover:text-pink-500">
-                  Sign in
+                <a
+                  href="/login"
+                  className="hover:text-pink-500"
+                  onMouseEnter={() => {
+                    set_Sign_up_and_register_menu(false);
+                  }}
+                >
+                  Sign in{" "}
                 </a>
               </div>
 
@@ -143,6 +154,42 @@ function Header() {
               </button>
             </div>
           </ul>
+        </div>
+
+        <div
+          className={`Sign_Up_Box_and_login_box_container relative ${
+            Sign_up_and_register_menu ? "hidden" : "flex"
+          } justify-center mb-20`}
+        >
+          <IoClose
+            className=" hidden lg:block` lg:absolute lg:top-6 lg:right-40 lg:cursor-pointer"
+            color="black"
+            size={20}
+            onClick={() => set_Sign_up_and_register_menu(true)}
+          />
+          <div className="Sign_Up_Box_and_login_box hidden lg:flex lg:h-[80vh] lg:w-[80%] lg:justify-center  lg:bg-white lg:rounded-4xl">
+            <div className="Sign_up_box w-[50%] h-[100%] flex flex-col items-center text-black ">
+              <h1 className="mt-10 text-2xl"> Sign Up</h1>
+              <p className="text-[12px] mt-2">
+                Join to our community for exploring more.
+              </p>
+              <Sign_up />
+            </div>
+
+            <div className="devider h-[500px] items-center justify-center z-[200] flex flex-col">
+              <Qrcode_new username="novo" email="asdasd" />
+              <p className="text-[12px] text-black text-center">
+                Scan With Shatadhru Mobile App.
+              </p>
+            </div>
+            <div className="Sign_in_box w-[50%] h-[100%] flex flex-col  items-center text-black  ">
+              <h1 className="mt-10 text-2xl"> Sign in</h1>
+              <p className="text-[12px] mt-2">
+                Join to our community for exploring more.
+              </p>
+              <Sign_in />
+            </div>
+          </div>
         </div>
       </header>
     </>
